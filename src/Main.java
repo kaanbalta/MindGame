@@ -66,7 +66,11 @@ public class Main {
         int i2 = scanner.nextInt();
         int j2 = scanner.nextInt();
 
-        if(kartlar[i1][j1].isTahmin()==true || kartlar[i2][j2].isTahmin()==true){
+
+        if(i1<0 || i2<0 || i1>3 || i2>3 || j1<0 || j2<0 || j1>3 || j2>3){
+            System.out.println("Geçerli değerler giriniz");
+        }
+        else if(kartlar[i1][j1].isTahmin()==true || kartlar[i2][j2].isTahmin()==true){
             System.out.println("Bu değer veya değerler daha öneden açılmış başka değer girin");
         }
 
